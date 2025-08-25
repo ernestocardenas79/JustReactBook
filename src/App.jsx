@@ -1,25 +1,29 @@
-import {useState} from 'react'
-import EnrolmentForm from './EnrolmentForm.jsx'
-import './App.css'
+import { useState } from 'react';
+import EnrolmentForm from './EnrolmentForm.jsx';
+import './App.css';
 
 function App() {
-  const [program, setProgram] = useState("UG")
-  const handleChange = (event)=>{
-    setProgram(event.target.value)
-  }
+  const [program, setProgram] = useState('UG');
+  const handleChange = (event) => {
+    setProgram(event.target.value);
+  };
 
   return (
     <div className="App">
       <div className="programs">
         <label htmlFor="">Choose Program:</label>
-        <select className="appDropDowns" onChange={handleChange} value={program}>
-           <option value="UG">Undergraduate</option>
-           <option value="PG">Postgraduate</option>
+        <select
+          className="appDropDowns"
+          onChange={handleChange}
+          value={program}
+        >
+          <option value="UG">Undergraduate</option>
+          <option value="PG">Postgraduate</option>
         </select>
       </div>
       <EnrolmentForm chosenProgram={program} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
