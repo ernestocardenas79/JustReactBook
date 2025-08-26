@@ -40,3 +40,26 @@ h1{
   font-size: 80px;
   font-style: italic;
 }
+
+.App {
+  font-family: sans-serif;
+  font-size: 19px;
+  text-align: left;
+  width: 100%;
+  padding-top: 50px;
+  float: left;
+}
+
+.programs{
+  padding-left: 50px;
+  width: 100%;
+  float:left;
+}
+
+.appDropDowns{
+  color:black;
+  font-family: inherit;
+  font-size: inherit;
+  margin-left: 10px;
+  padding: 8px 8px;
+}
