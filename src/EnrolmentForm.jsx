@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import './App.css';
 
-export default function EnrolmentForm() {
+export default function EnrolmentForm(props) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [welcomeMessage, setWelcomeMessage] = useState('');
@@ -11,6 +11,7 @@ export default function EnrolmentForm() {
     event.preventDefault();
     console.log({ event });
     setWelcomeMessage(`Welcome ${firstName} ${lastName}`);
+    props.setUpdatedSeats(props.currentSeats - 1);
   };
 
   return (

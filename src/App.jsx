@@ -4,12 +4,19 @@ import './App.css';
 
 function App() {
   const [program, setProgram] = useState('UG');
+  const [seats, setSeats] = useState(100);
+
   const handleChange = (event) => {
     setProgram(event.target.value);
   };
 
+  const setUpdatedSeats =(updatedSeats)=>{
+    setSeats(updatedSeats);
+  }
+
   return (
     <div className="App">
+      <h1>Remaning Seats - {seats}</h1>
       <div className="programs">
         <label htmlFor="">Choose Program:</label>
         <select
@@ -21,7 +28,11 @@ function App() {
           <option value="PG">Postgraduate</option>
         </select>
       </div>
-      <EnrolmentForm chosenProgram={program} />
+      <EnrolmentForm chosenProgram={program} 
+      setUpdatedSeats={setUpdatedSeats}
+      currentSeats={seats}
+      />
+
     </div>
   );
 }
