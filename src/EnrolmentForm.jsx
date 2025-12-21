@@ -15,7 +15,7 @@ export default function EnrolmentForm(props) {
 
   return (
     <div>
-      <h2>Student Details</h2>
+      <h3>Student Details</h3>
 
       <form className="enrolForm" onSubmit={handleSubmit}>
         <label>First Name:</label>
