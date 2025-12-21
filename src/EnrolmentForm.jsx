@@ -9,14 +9,13 @@ export default function EnrolmentForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ event });
     setWelcomeMessage(`Welcome ${firstName} ${lastName}`);
     props.setUpdatedSeats(props.currentSeats - 1);
   };
 
   return (
     <div>
-      <h1>Student Details</h1>
+      <h2>Student Details</h2>
 
       <form className="enrolForm" onSubmit={handleSubmit}>
         <label>First Name:</label>
